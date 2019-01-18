@@ -56,6 +56,13 @@ WHERE fa.actor_id IN (28, 37)
 GROUP BY f.title
 HAVING COUNT(a.actor_id) = (SELECT COUNT(*) FROM actor a_inner WHERE a_inner.actor_id IN (28, 37));
 
+SELECT fa.film_id
+FROM film_actor fa
+       JOIN actor a ON fa.actor_id = a.actor_id
+WHERE a.actor_id IN (28, 37)
+GROUP BY fa.film_id
+HAVING COUNT(a.actor_id) = 2;
+
 SELECT f.title
 FROM film f
        JOIN film_actor fa ON f.film_id = fa.film_id
