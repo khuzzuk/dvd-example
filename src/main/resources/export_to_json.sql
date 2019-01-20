@@ -1,0 +1,1 @@
+SELECT array_to_json(array_agg(f)) FROM film f;
