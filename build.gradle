@@ -30,7 +30,9 @@ dependencies {
     runtimeOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.postgresql:postgresql'
     compileOnly 'org.projectlombok:lombok'
-    
+
+    compile group: 'org.hibernate.ogm', name: 'hibernate-ogm-mongodb', version: '5.4.1.Final'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.4', ext: 'pom'
     testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'
