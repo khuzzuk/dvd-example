@@ -3,6 +3,8 @@ package com.example.dvdexample.model;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +16,7 @@ import java.util.Set;
 @Setter
 @EqualsAndHashCode(of = "id")
 @Entity
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Film {
     @Id
     @Column(name = "film_id")

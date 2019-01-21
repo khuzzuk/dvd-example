@@ -1,6 +1,6 @@
 package com.example.dvdexample.bussiness
 
-import ch.qos.logback.core.util.SystemInfo
+
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import spock.lang.Specification
@@ -40,4 +40,4 @@ class FilmReportingServiceImplSpec extends Specification {
         then:
         report.size() == 14582
     }
-}
+    }
